@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                // Clone the Git repository
+                git 'https://github.com/shivasai8688/basicproject.git'
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                // Navigate to the folder containing the React project
+                dir('basichtml') {
+                    // Install necessary dependencies
+                    sh 'npm install'
+                }
+            }
+        }
+        
+        stage('Build React Application') {
+            steps {
+                dir('basichtml') {
+                    // Build the React application
+                    sh 'npm run build'
+                }
+            }
+        }
+        
+        stage('Copy to /var/www/html') {
+            steps {
+                // Copy the index.html file to the desired location
+                sh 'sudo cp basichtml/index.html /var/www/html/'
+            }
+        }
+    }
+}
