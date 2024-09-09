@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins Project Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .status {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            color: #fff;
+            text-align: center;
+        }
+        .success {
+            background-color: #4CAF50;
+        }
+        .failure {
+            background-color: #f44336;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .section-content {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jenkins Project: <em>Project Name</em></h1>
+
+        <div class="status success">
+            Build Status: SUCCESS
+        </div>
+        <!-- If the build fails, use this line instead -->
+        <!-- <div class="status failure">Build Status: FAILURE</div> -->
+
+        <div class="section">
+            <div class="section-title">Project Description:</div>
+            <div class="section-content">
+                <p>Provide a brief description of the project here. Include key objectives, technologies used, and other relevant details.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Build Details:</div>
+            <div class="section-content">
+                <p><strong>Last Build:</strong> #42</p>
+                <p><strong>Build Duration:</strong> 5 minutes 23 seconds</p>
+                <p><strong>Triggered By:</strong> SCM Change</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Pipeline Steps:</div>
+            <div class="section-content">
+                <ul>
+                    <li>Checkout code from Git</li>
+                    <li>Run unit tests</li>
+                    <li>Build application</li>
+                    <li>Deploy to staging environment</li>
+                    <li>Run integration tests</li>
+                    <li>Deploy to production</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Artifacts:</div>
+            <div class="section-content">
+                <p><a href="#">Download build artifacts</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
